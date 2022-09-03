@@ -1,0 +1,62 @@
+.control-panel {
+  background-color: #aaa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 15rem;
+}
+
+.control-panel .statistics .header {
+  margin-top: 1rem;
+}
+
+.control-panel .header {
+  border-bottom: 1px solid #777;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.control-panel .header .title {
+  font-size: 1.25rem;
+}
+
+.control-panel .header .specification {
+  color: #555;
+  font-size: 1rem;
+}
+
+.control-panel .line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.control-panel .actions .multiple-buttons {
+  display: flex;
+  justify-content: stretch;
+}
+
+.control-panel .multi-value {
+  display: flex;
+  justify-content: space-between;
+}
+
+.control-panel .multi-value label {
+  text-align: left;
+  width: 5rem;
+}
+
+.control-panel .multi-value-selector {
+  color: #777;
+  cursor: pointer;
+  flex: 1;
+}
+
+.control-panel .multi-value-selector:hover {
+  color: red;
+}
+
+.control-panel .multi-value-selector.active {
+  color: #a00;
+}

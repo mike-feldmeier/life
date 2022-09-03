@@ -1,0 +1,42 @@
+.grid {
+  background-color: #ddd;
+  display: flex;
+  flex: 1;
+  padding: 1rem;
+}
+
+.grid .content {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.grid .content .row {
+  display: flex;
+  flex: 1;
+}
+
+.grid .content .cell {
+  flex: 1;
+}
+
+.grid .content .cell.show-grid {
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.grid .content .cell[data-state=void] {
+  background-color: #e0e0e0;
+}
+
+.grid .content .cell[data-state=alive] {
+  background-color: blue;
+}
+
+.grid .content .cell[data-state=dead] {
+  background-color: #ddd;
+}
