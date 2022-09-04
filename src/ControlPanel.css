@@ -60,3 +60,36 @@
 .control-panel .multi-value-selector.active {
   color: #a00;
 }
+
+.control-panel .slideup-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.control-panel .slideup-wrapper .button {
+  margin-top: 0;
+}
+
+.control-panel .popup-content {
+  background-color: #ddd;
+  border: 1px solid #555;
+  border-bottom: none;
+  display: none;
+  padding: 0.5rem;
+  margin: 0 0.125rem;
+  flex-direction: column;
+}
+
+.control-panel .popup-content.visible {
+  display: flex;
+}
+
+.control-panel .popup-item {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.control-panel .popup-item:hover {
+  background-color: #ccc;
+}

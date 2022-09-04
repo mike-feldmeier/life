@@ -1,5 +1,5 @@
 .grid {
-  background-color: #ddd;
+  background-color: #ccc;
   display: flex;
   flex: 1;
   padding: 1rem;
@@ -29,14 +29,14 @@
   border-bottom: 1px solid #ccc;
 }
 
-.grid .content .cell[data-state=void] {
+.grid .content .cell[data-state="0"] {
   background-color: #e0e0e0;
 }
 
-.grid .content .cell[data-state=alive] {
+.grid .content .cell[data-state="1"] {
   background-color: blue;
 }
 
-.grid .content .cell[data-state=dead] {
-  background-color: #ddd;
+.grid .content .cell[data-state="2"] {
+  background-color: #d0d0ff;
 }

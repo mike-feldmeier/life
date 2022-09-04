@@ -1,18 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import "./Grid.css"
 
-const makeRow = (x) => new Array(x).fill(0).map((e, i) => <div key={i} className="cell show-grid" data-state="void"></div>)
+const makeRow = (row, y) => {
+  return row.map((cell, x) => {
+    return <div key={x} className="cell show-grid" data-index={x} data-state={cell.state} title={`y: ${y}, x: ${x}`}></div>
+  })
+}
 
-const makeWorld = (x, y) => new Array(y).fill(0).map((e, i) => <div key={i} className="row">{makeRow(x)}</div>)
+const makeGrid = (world) => {
+  return world.map((row, y) => {
+    return <div key={y} className="row" data-index={y}>{makeRow(row, y)}</div>
+  })
+}
 
 const Grid = (props) => {
-  const world = makeWorld(200, 100)
+  const [grid, setGrid] = useState(makeGrid(props.data.world))
+
+  useEffect(() => {
+    setGrid(makeGrid(props.data.world))
+  }, [props.data.world])
 
   return (
     <div className="grid">
       <div className="content">
-        {world}
+        {grid}
       </div>
     </div>
   )
